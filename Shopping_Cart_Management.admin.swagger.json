@@ -6,7 +6,7 @@
         "version": "2.0"
     }, 
     "host": "biologeek.orange-labs.fr", 
-    "basePath": "/tmf-api/shoppingCartManagement/v2/", 
+    "basePath": "/tmf-api/shoppingCartManagement/v1/", 
     "schemes": [
         "https"
     ], 
@@ -434,6 +434,9 @@
                         "schema": {
                             "$ref": "#/definitions/Error"
                         }
+                    }, 
+                    "204": {
+                        "description": "Deleted"
                     }, 
                     "500": {
                         "description": "Internal Server Error", 
