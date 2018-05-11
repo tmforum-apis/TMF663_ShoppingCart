@@ -1,12 +1,12 @@
 {
     "swagger": "2.0", 
     "info": {
-        "title": "Shopping Cart Management", 
-        "description": "This is Swagger UI environment generated for the TMF Shopping Cart Management specification", 
+        "title": "Shopping Cart", 
+        "description": "This is Swagger UI environment generated for the TMF Shopping Cart specification", 
         "version": "2.0"
     }, 
     "host": "serverRoot", 
-    "basePath": "/tmf-api/shoppingCartManagement/v2/", 
+    "basePath": "/tmf-api/shoppingCart/v2/", 
     "schemes": [
         "https"
     ], 
@@ -45,126 +45,6 @@
                         "in": "query", 
                         "name": "limit", 
                         "description": "Requested number of resources to be provided in response"
-                    }, 
-                    {
-                        "format": "date-time", 
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "validFor.endDateTime", 
-                        "description": "For filtering on the base of 'endDateTime' field (equality)"
-                    }, 
-                    {
-                        "name": "validFor.endDateTime.gt", 
-                        "description": "For filtering on the base of 'endDateTime' field (great than)", 
-                        "type": "string", 
-                        "format": "date-time", 
-                        "in": "query"
-                    }, 
-                    {
-                        "name": "validFor.endDateTime.lt", 
-                        "description": "For filtering on the base of 'endDateTime' field (less than)", 
-                        "type": "string", 
-                        "format": "date-time", 
-                        "in": "query"
-                    }, 
-                    {
-                        "format": "date-time", 
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "validFor.startDateTime", 
-                        "description": "For filtering on the base of 'startDateTime' field (equality)"
-                    }, 
-                    {
-                        "name": "validFor.startDateTime.gt", 
-                        "description": "For filtering on the base of 'startDateTime' field (great than)", 
-                        "type": "string", 
-                        "format": "date-time", 
-                        "in": "query"
-                    }, 
-                    {
-                        "name": "validFor.startDateTime.lt", 
-                        "description": "For filtering on the base of 'startDateTime' field (less than)", 
-                        "type": "string", 
-                        "format": "date-time", 
-                        "in": "query"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "boolean", 
-                        "name": "contactMedium.preferred", 
-                        "description": "For filtering on the base of 'preferred' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "contactMedium.type", 
-                        "description": "For filtering on the base of 'type' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "cartTotalPrice.name", 
-                        "description": "For filtering on the base of 'name' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "cartTotalPrice.priceType", 
-                        "description": "For filtering on the base of 'priceType' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "cartTotalPrice.recurringChargePeriod", 
-                        "description": "For filtering on the base of 'recurringChargePeriod' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "cartTotalPrice.unitOfMeasure", 
-                        "description": "For filtering on the base of 'unitOfMeasure' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "cartItem.action", 
-                        "description": "For filtering on the base of 'action' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "integer", 
-                        "name": "cartItem.quantity", 
-                        "description": "For filtering on the base of 'quantity' field (equality)"
-                    }, 
-                    {
-                        "name": "cartItem.quantity.gt", 
-                        "description": "For filtering on the base of 'quantity' field (great than)", 
-                        "type": "integer", 
-                        "in": "query"
-                    }, 
-                    {
-                        "name": "cartItem.quantity.lt", 
-                        "description": "For filtering on the base of 'quantity' field (less than)", 
-                        "type": "integer", 
-                        "in": "query"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "cartItem.status", 
-                        "description": "For filtering on the base of 'status' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "relatedParty.name", 
-                        "description": "For filtering on the base of 'name' field (equality)"
-                    }, 
-                    {
-                        "in": "query", 
-                        "type": "string", 
-                        "name": "relatedParty.role", 
-                        "description": "For filtering on the base of 'role' field (equality)"
                     }
                 ], 
                 "responses": {
@@ -898,7 +778,7 @@
                         "$ref": "#/definitions/Note"
                     }
                 }, 
-                "totalItemPrice": {
+                "itemTotalPrice": {
                     "type": "array", 
                     "items": {
                         "$ref": "#/definitions/CartPrice"
