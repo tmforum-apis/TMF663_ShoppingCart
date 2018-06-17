@@ -2,7 +2,7 @@
     "swagger": "2.0", 
     "info": {
         "title": "Shopping Cart", 
-        "description": "This is Swagger UI environment generated for the TMF Shopping Cart specification", 
+        "description": "This is Swagger UI environment generated for the TMF Shopping Cart  specification", 
         "version": "2.0"
     }, 
     "host": "serverRoot", 
@@ -519,6 +519,18 @@
                 "cartItem"
             ], 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "href": {
                     "type": "string", 
                     "description": "Hyperlink to access the shopping cart"
@@ -555,18 +567,6 @@
                     "items": {
                         "$ref": "#/definitions/RelatedPartyRef"
                     }
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "A link to the schema describing a resource (for type extension)."
-                }, 
-                "@baseType": {
-                    "type": "string", 
-                    "description": "The base type for use in polymorphic collections"
                 }
             }
         }, 
@@ -577,6 +577,18 @@
                 "cartItem"
             ], 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "validFor": {
                     "$ref": "#/definitions/TimePeriod", 
                     "description": "The period for which the shopping cart is valid (e.g. 90 if no activity or 7 days if cart is empty)"
@@ -605,18 +617,6 @@
                     "items": {
                         "$ref": "#/definitions/RelatedPartyRef"
                     }
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "A link to the schema describing a resource (for type extension)."
-                }, 
-                "@baseType": {
-                    "type": "string", 
-                    "description": "The base type for use in polymorphic collections"
                 }
             }
         }, 
@@ -624,6 +624,18 @@
             "type": "object", 
             "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions\nSkipped properties: id,href,id,href,validFor,cartTotalPrice", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "contactMedium": {
                     "type": "array", 
                     "items": {
@@ -641,18 +653,6 @@
                     "items": {
                         "$ref": "#/definitions/RelatedPartyRef"
                     }
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "A link to the schema describing a resource (for type extension)."
-                }, 
-                "@baseType": {
-                    "type": "string", 
-                    "description": "The base type for use in polymorphic collections"
                 }
             }
         }, 
@@ -676,6 +676,18 @@
             "type": "object", 
             "description": "Indicates the contact medium that could be used to contact the party.", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "preferred": {
                     "type": "boolean", 
                     "description": "If true, indicates that is the preferred contact medium"
@@ -690,10 +702,6 @@
                 }, 
                 "characteristic": {
                     "$ref": "#/definitions/MediumCharacteristic"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -701,6 +709,18 @@
             "type": "object", 
             "description": "An amount, usually of money, that represents the actual price paid by the customer for this item. May represent the total price of the shopping cart or the total of the cart item depending on the relation", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "description": {
                     "type": "string", 
                     "description": "A narrative that explains in detail the semantics of this order item price."
@@ -729,10 +749,6 @@
                     "items": {
                         "$ref": "#/definitions/PriceAlteration"
                     }
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -744,6 +760,18 @@
                 "action"
             ], 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "action": {
                     "type": "string", 
                     "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
@@ -801,10 +829,6 @@
                     "items": {
                         "$ref": "#/definitions/CartItemRelationship"
                     }
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -815,6 +839,10 @@
                 "id OR href OR name"
             ], 
             "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
                 "href": {
                     "type": "string", 
                     "description": "Reference of the related party, could be a party reference or a party role reference"
@@ -830,10 +858,6 @@
                 "role": {
                     "type": "string", 
                     "description": "Role of the related party."
-                }, 
-                "@referredType": {
-                    "type": "string", 
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             }
         }, 
@@ -895,6 +919,18 @@
             "type": "object", 
             "description": "Provides all amounts (tax included, duty free, tax rate), used currency and percentage to apply for Price Alteration.", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "dutyFreeAmount": {
                     "$ref": "#/definitions/Money", 
                     "description": "All taxes excluded amount (expressed in the given currency)"
@@ -912,10 +948,6 @@
                     "type": "number", 
                     "format": "float", 
                     "description": "Tax rate"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -923,6 +955,18 @@
             "type": "object", 
             "description": "Is an amount, usually of money, that modifies the price charged for an order item.", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "applicationDuration": {
                     "type": "integer", 
                     "description": "Duration during which the alteration applies on the order item price (for instance 2 months free of charge for the recurring charge)"
@@ -953,10 +997,6 @@
                 }, 
                 "price": {
                     "$ref": "#/definitions/Price"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -978,6 +1018,18 @@
         "CartTerm": {
             "type": "object", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "description": {
                     "type": "string"
                 }, 
@@ -986,10 +1038,6 @@
                 }, 
                 "name": {
                     "type": "string"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -1020,6 +1068,22 @@
             "type": "object", 
             "description": "Product reference. Configure the product characteristics (only configurable characteristics and necessary only if a non default value is selected) and/or identify the product that needs to be modified/deleted.", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Indicates the type of the referred object. This attribute is to be used when the object is representing a reference to an existing object instead of the of the object itself."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "href": {
                     "type": "string", 
                     "description": "Reference of the product"
@@ -1058,10 +1122,6 @@
                 }, 
                 "productSpecification": {
                     "$ref": "#/definitions/ProductSpecificationRef"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -1069,6 +1129,10 @@
             "type": "object", 
             "description": "ProductOffering reference. A product offering represents entities that are orderable from the provider of the catalog, this resource includes pricing information.", 
             "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
                 "href": {
                     "type": "string", 
                     "description": "Reference of the product offering"
@@ -1080,10 +1144,6 @@
                 "name": {
                     "type": "string", 
                     "description": "Name of the product offering"
-                }, 
-                "@referredType": {
-                    "type": "string", 
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             }
         }, 
@@ -1142,8 +1202,24 @@
         }, 
         "Place": {
             "type": "object", 
-            "description": "Place reference. Place defines the places where the products are sold or delivered.", 
+            "description": "Place defines a location generically. Could be a geographic address a geographic address, a geographic location.", 
             "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Indicates the type of the referred object. This attribute is to be used when the object is representing a reference to an existing object instead of the of the object itself."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
                 "href": {
                     "type": "string", 
                     "description": "Unique reference of the place"
@@ -1159,10 +1235,6 @@
                 "role": {
                     "type": "string", 
                     "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -1192,6 +1264,10 @@
             "type": "object", 
             "description": "Product specification reference: A ProductSpecification is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to customers or other parties playing a party role.", 
             "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
                 "href": {
                     "type": "string", 
                     "description": "Reference of the product specification"
@@ -1213,10 +1289,6 @@
                 }, 
                 "describing": {
                     "$ref": "#/definitions/ProductSpecificationSchemaRef"
-                }, 
-                "@referredType": {
-                    "type": "string", 
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             }
         }, 
@@ -1235,6 +1307,10 @@
             "type": "object", 
             "description": "ProductSpecification description could be done with schema use. This information allows to retrieve schema type and location", 
             "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
                 "@schemaLocation": {
                     "type": "string", 
                     "description": "An URL to the schema describing this resource"
@@ -1242,10 +1318,6 @@
                 "@type": {
                     "type": "string", 
                     "description": "Indicates the type of resource. Here it will be a product specification"
-                }, 
-                "@referredType": {
-                    "type": "string", 
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             }
         }, 
@@ -1253,13 +1325,13 @@
             "type": "object", 
             "description": "CartIIem reference. A CartItem is an identified part of the shopping cart.", 
             "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
                 "id": {
                     "type": "string", 
                     "description": "Unique identifier of the cart item"
-                }, 
-                "@referredType": {
-                    "type": "string", 
-                    "description": "The actual type of the target instance when needed for disambiguation."
                 }
             }
         }, 
