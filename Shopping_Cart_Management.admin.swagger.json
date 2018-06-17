@@ -1,12 +1,12 @@
 {
     "swagger": "2.0", 
     "info": {
-        "title": "Shopping Cart", 
-        "description": "This is Swagger UI environment generated for the TMF Shopping Cart  specification", 
+        "title": "Shopping Cart Management", 
+        "description": "This is Swagger UI environment generated for the TMF Shopping Cart Management specification", 
         "version": "2.0"
     }, 
     "host": "serverRoot", 
-    "basePath": "/tmf-api/shoppingCart/v2/", 
+    "basePath": "/tmf-api/shoppingCartManagement/v2/", 
     "schemes": [
         "https"
     ], 
@@ -904,14 +904,6 @@
                 "type": {
                     "type": "string", 
                     "description": "Type of medium (fax, mobile phone...)"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "A link to the schema describing a resource (for type extension)."
                 }
             }
         }, 
@@ -1057,10 +1049,6 @@
                 "text": {
                     "type": "string", 
                     "description": "Text of the note"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -1164,10 +1152,6 @@
                     "items": {
                         "$ref": "#/definitions/CartItemRef"
                     }
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -1193,10 +1177,6 @@
                 }, 
                 "product": {
                     "$ref": "#/definitions/Product"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
                 }
             }
         }, 
@@ -1249,14 +1229,6 @@
                 "value": {
                     "type": "string", 
                     "description": "Value of the characteristic"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "The class type of the actual resource (for type extension)."
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "A link to the schema describing a resource (for type extension)."
                 }
             }
         }, 
