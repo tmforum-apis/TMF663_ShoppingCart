@@ -1,12 +1,12 @@
 {
     "swagger": "2.0", 
     "info": {
-        "title": "Shopping Cart Management", 
-        "description": "This is Swagger UI environment generated for the TMF Shopping Cart Management specification", 
+        "title": "Shopping Cart", 
+        "description": "This is Swagger UI environment generated for the TMF Shopping Cart specification", 
         "version": "2.0"
     }, 
     "host": "serverRoot", 
-    "basePath": "/tmf-api/shoppingCartManagement/v2/", 
+    "basePath": "/tmf-api/shoppingCart/v2/", 
     "schemes": [
         "https"
     ], 
