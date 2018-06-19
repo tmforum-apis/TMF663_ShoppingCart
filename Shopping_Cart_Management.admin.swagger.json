@@ -1255,42 +1255,7 @@
                 "version": {
                     "type": "string", 
                     "description": "Version of the product specification"
-                }, 
-                "targetResourceSchema": {
-                    "$ref": "#/definitions/TargetServiceSchema"
-                }, 
-                "describing": {
-                    "$ref": "#/definitions/ProductSpecificationSchemaRef"
-                }
-            }
-        }, 
-        "TargetServiceSchema": {
-            "type": "object", 
-            "properties": {
-                "@schemaLocation": {
-                    "type": "string"
-                }, 
-                "@type": {
-                    "type": "string"
-                }
-            }
-        }, 
-        "ProductSpecificationSchemaRef": {
-            "type": "object", 
-            "description": "ProductSpecification description could be done with schema use. This information allows to retrieve schema type and location", 
-            "properties": {
-                "@referredType": {
-                    "type": "string", 
-                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
-                }, 
-                "@schemaLocation": {
-                    "type": "string", 
-                    "description": "An URL to the schema describing this resource"
-                }, 
-                "@type": {
-                    "type": "string", 
-                    "description": "Indicates the type of resource. Here it will be a product specification"
-                }
+                }            
             }
         }, 
         "CartItemRef": {
