@@ -11,7 +11,7 @@ network service.  Shopping Cart contains list of cart items, a reference to part
 party role (e.g. customer) or contact medium in case of unknown customer, In addition
 the calculated total items price including promotions.
 
-To access this API; (the Specification, Postman Collection, Swagger file, Swagger-UI, 
+To access this API; (the Specification, Postman Collection, Swagger file, 
 Reference Implementation, Conformance Profile, and CTK) go to the Open API table at:
 
 https://projects.tmforum.org/wiki/display/API/Open+API+Table
