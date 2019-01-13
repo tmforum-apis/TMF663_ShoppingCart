@@ -3,7 +3,7 @@
     "info": {
         "title": "Shopping Cart", 
         "description": "This is Swagger UI environment generated for the TMF Shopping Cart specification", 
-        "version": "2.0.1"
+        "version": "2.0.3"
     }, 
     "host": "serverRoot", 
     "basePath": "/tmf-api/shoppingCart/v2/", 
@@ -749,10 +749,6 @@
         "CartItem": {
             "type": "object", 
             "description": "An identified part of the shopping cart. A shopping cart  is decomposed into one or more shopping cart item. Cart item represents a product offering or bundled product offering that user wish to purchase, as well as the pricing of the product offering, reference to product in case of configured characteristic or installation address. Cart items can be related to other cart item to related bundled offerings or reference cart Items to a shipping options", 
-            "required": [
-                "id", 
-                "action"
-            ], 
             "properties": {
                 "@baseType": {
                     "type": "string", 
