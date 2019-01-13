@@ -514,10 +514,7 @@
     "definitions": {
         "ShoppingCart": {
             "type": "object", 
-            "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions", 
-            "required": [
-                "cartItem"
-            ], 
+            "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions",  
             "properties": {
                 "@baseType": {
                     "type": "string", 
@@ -573,9 +570,6 @@
         "ShoppingCart_Create": {
             "type": "object", 
             "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions\nSkipped properties: id,href", 
-            "required": [
-                "cartItem"
-            ], 
             "properties": {
                 "@baseType": {
                     "type": "string", 
