@@ -3,7 +3,7 @@
     "info": {
         "title": "Shopping Cart", 
         "description": "This is Swagger UI environment generated for the TMF Shopping Cart specification", 
-        "version": "2.0"
+        "version": "2.0.1"
     }, 
     "host": "serverRoot", 
     "basePath": "/tmf-api/shoppingCart/v2/", 
@@ -788,7 +788,7 @@
                     "type": "string", 
                     "description": "status of cart item. e.g \"Active\" , \"SavedForLater\"."
                 }, 
-                "cartTerm": {
+                "itemTerm": {
                     "type": "array", 
                     "items": {
                         "$ref": "#/definitions/CartTerm"
