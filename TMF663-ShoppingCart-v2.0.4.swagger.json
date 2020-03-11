@@ -1,0 +1,1340 @@
+{
+    "swagger": "2.0", 
+    "info": {
+        "title": "Shopping Cart", 
+        "description": "This is Swagger UI environment generated for the TMF Shopping Cart specification", 
+        "version": "2.0.3"
+    }, 
+    "host": "serverRoot", 
+    "basePath": "/tmf-api/shoppingCart/v2/", 
+    "schemes": [
+        "https"
+    ], 
+    "consumes": [
+        "application/json"
+    ], 
+    "produces": [
+        "application/json"
+    ], 
+    "paths": {
+        "/shoppingCart": {
+            "get": {
+                "operationId": "listShoppingCart", 
+                "summary": "List or find 'ShoppingCart' objects",
+                "tags": [
+                    "shoppingCart"
+                ], 
+                "parameters": [
+                    {
+                        "type": "string", 
+                        "required": false, 
+                        "in": "query", 
+                        "name": "fields", 
+                        "description": "Comma separated properties to display in response"
+                    }, 
+                    {
+                        "type": "integer", 
+                        "required": false, 
+                        "in": "query", 
+                        "name": "offset", 
+                        "description": "Requested index for start of resources to be provided in response"
+                    }, 
+                    {
+                        "type": "integer", 
+                        "required": false, 
+                        "in": "query", 
+                        "name": "limit", 
+                        "description": "Requested number of resources to be provided in response"
+                    }
+                ], 
+                "responses": {
+                    "200": {
+                        "description": "Ok", 
+                        "schema": {
+                            "items": {
+                                "$ref": "#/definitions/ShoppingCart"
+                            }, 
+                            "type": "array"
+                        }
+                    }, 
+                    "400": {
+                        "description": "Bad Request", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "401": {
+                        "description": "Unauthorized", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "403": {
+                        "description": "Forbidden", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "404": {
+                        "description": "Not Found", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "405": {
+                        "description": "Method Not allowed", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "409": {
+                        "description": "Conflict", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "500": {
+                        "description": "Internal Server Error", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }, 
+            "post": {
+                "operationId": "createShoppingCart", 
+                "summary": "Creates a 'ShoppingCart'", 
+                "tags": [
+                    "shoppingCart"
+                ], 
+                "parameters": [
+                    {
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCart_Create"
+                        }, 
+                        "required": true, 
+                        "in": "body", 
+                        "name": "shoppingCart", 
+                        "description": "The Shopping Cart to be created"
+                    }
+                ], 
+                "responses": {
+                    "201": {
+                        "description": "Created", 
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCart"
+                        }
+                    }, 
+                    "400": {
+                        "description": "Bad Request", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "401": {
+                        "description": "Unauthorized", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "403": {
+                        "description": "Forbidden", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "404": {
+                        "description": "Not Found", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "405": {
+                        "description": "Method Not allowed", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "409": {
+                        "description": "Conflict", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "500": {
+                        "description": "Internal Server Error", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }, 
+        "/shoppingCart/{id}": {
+            "get": {
+                "operationId": "retrieveShoppingCart", 
+                "summary": "Retrieves a 'ShoppingCart' by Id", 
+                "tags": [
+                    "shoppingCart"
+                ], 
+                "parameters": [
+                    {
+                        "required": true, 
+                        "type": "string", 
+                        "name": "id", 
+                        "in": "path", 
+                        "description": "Identifier of the Shopping Cart"
+                    }
+                ], 
+                "responses": {
+                    "200": {
+                        "description": "Ok", 
+                        "schema": {
+                            "items": {
+                                "$ref": "#/definitions/ShoppingCart"
+                            }, 
+                            "type": "array"
+                        }
+                    }, 
+                    "400": {
+                        "description": "Bad Request", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "401": {
+                        "description": "Unauthorized", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "403": {
+                        "description": "Forbidden", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "404": {
+                        "description": "Not Found", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "405": {
+                        "description": "Method Not allowed", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "409": {
+                        "description": "Conflict", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "500": {
+                        "description": "Internal Server Error", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }, 
+            "patch": {
+                "operationId": "patchShoppingCart", 
+                "summary": "Updates partially a 'ShoppingCart' by Id", 
+                "tags": [
+                    "shoppingCart"
+                ], 
+                "parameters": [
+                    {
+                        "required": true, 
+                        "type": "string", 
+                        "name": "id", 
+                        "in": "path", 
+                        "description": "Identifier of the Shopping Cart"
+                    }, 
+                    {
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCart_Update"
+                        }, 
+                        "required": true, 
+                        "in": "body", 
+                        "name": "shoppingCart", 
+                        "description": "The Shopping Cart to be updated"
+                    }
+                ], 
+                "responses": {
+                    "200": {
+                        "description": "Updated", 
+                        "schema": {
+                            "$ref": "#/definitions/ShoppingCart"
+                        }
+                    }, 
+                    "400": {
+                        "description": "Bad Request", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "401": {
+                        "description": "Unauthorized", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "403": {
+                        "description": "Forbidden", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "404": {
+                        "description": "Not Found", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "405": {
+                        "description": "Method Not allowed", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "409": {
+                        "description": "Conflict", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "500": {
+                        "description": "Internal Server Error", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }, 
+            "delete": {
+                "operationId": "deleteShoppingCart", 
+                "summary": "Deletes a 'ShoppingCart' by Id", 
+                "tags": [
+                    "shoppingCart"
+                ], 
+                "parameters": [
+                    {
+                        "required": true, 
+                        "type": "string", 
+                        "name": "id", 
+                        "in": "path", 
+                        "description": "Identifier of the Shopping Cart"
+                    }
+                ], 
+                "responses": {
+                    "204": {
+                        "description": "Deleted"
+                    }, 
+                    "400": {
+                        "description": "Bad Request", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "401": {
+                        "description": "Unauthorized", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "403": {
+                        "description": "Forbidden", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "404": {
+                        "description": "Not Found", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "405": {
+                        "description": "Method Not allowed", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "409": {
+                        "description": "Conflict", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "500": {
+                        "description": "Internal Server Error", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }, 
+        "/hub": {
+            "post": {
+                "operationId": "registerListener", 
+                "summary": "Register a listener", 
+                "description": "Sets the communication endpoint address the service instance must use to deliver information about its health state, execution state, failures and metrics.", 
+                "tags": [
+                    "events subscription"
+                ], 
+                "parameters": [
+                    {
+                        "name": "data", 
+                        "schema": {
+                            "$ref": "#/definitions/EventSubscriptionInput"
+                        }, 
+                        "required": true, 
+                        "in": "body", 
+                        "description": "Data containing the callback endpoint to deliver the information"
+                    }
+                ], 
+                "responses": {
+                    "201": {
+                        "description": "Subscribed", 
+                        "schema": {
+                            "$ref": "#/definitions/EventSubscription"
+                        }
+                    }, 
+                    "405": {
+                        "description": "Method Not allowed", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "404": {
+                        "description": "Not Found", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "403": {
+                        "description": "Forbidden", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "500": {
+                        "description": "Internal Server Error", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "401": {
+                        "description": "Unauthorized", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "400": {
+                        "description": "Bad Request", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "409": {
+                        "description": "Conflict", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }, 
+        "/hub/{id}": {
+            "delete": {
+                "operationId": "unregisterListener", 
+                "summary": "Unregister a listener", 
+                "description": "Resets the communication endpoint address the service instance must use to deliver information about its health state, execution state, failures and metrics.", 
+                "tags": [
+                    "events subscription"
+                ], 
+                "parameters": [
+                    {
+                        "name": "id", 
+                        "type": "string", 
+                        "required": true, 
+                        "in": "path", 
+                        "description": "The id of the registered listener"
+                    }
+                ], 
+                "responses": {
+                    "204": {
+                        "description": "Deleted"
+                    }, 
+                    "405": {
+                        "description": "Method not allowed", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "404": {
+                        "description": "Not Found", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "403": {
+                        "description": "Forbidden", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "401": {
+                        "description": "Unauthorized", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "400": {
+                        "description": "Bad request", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }, 
+                    "500": {
+                        "description": "Internal Server Error", 
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }
+    }, 
+    "definitions": {
+        "ShoppingCart": {
+            "type": "object", 
+            "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions",  
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Hyperlink to access the shopping cart"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier created on provider side (e.g. Order Capture system)"
+                }, 
+                "validFor": {
+                    "$ref": "#/definitions/TimePeriod", 
+                    "description": "The period for which the shopping cart is valid (e.g. 90 if no activity or 7 days if cart is empty)"
+                }, 
+                "contactMedium": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/ContactMedium"
+                    }
+                }, 
+                "cartTotalPrice": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartPrice"
+                    }, 
+                    "description": "Total amount of the shopping cart, usually of money, that represents the actual price paid by the Customer for cart (considering only \"Active\" cart items)"
+                }, 
+                "cartItem": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartItem"
+                    }
+                }, 
+                "relatedParty": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/RelatedPartyRef"
+                    }
+                }
+            }
+        }, 
+        "ShoppingCart_Create": {
+            "type": "object", 
+            "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions\nSkipped properties: id,href", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "validFor": {
+                    "$ref": "#/definitions/TimePeriod", 
+                    "description": "The period for which the shopping cart is valid (e.g. 90 if no activity or 7 days if cart is empty)"
+                }, 
+                "contactMedium": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/ContactMedium"
+                    }
+                }, 
+                "cartTotalPrice": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartPrice"
+                    }, 
+                    "description": "Total amount of the shopping cart, usually of money, that represents the actual price paid by the Customer for cart (considering only \"Active\" cart items)"
+                }, 
+                "cartItem": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartItem"
+                    }
+                }, 
+                "relatedParty": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/RelatedPartyRef"
+                    }
+                }
+            }
+        }, 
+        "ShoppingCart_Update": {
+            "type": "object", 
+            "description": "Shopping Cart resource is used for the temporarily selection and reservation of product offerings in e-commerce, call center and retail purchase. Shopping cart supports purchase of both physical and digital goods and service (e.g. handset, telecom network service). Shopping Cart contain list of cart items, a reference to customer (partyRole) or contact medium in case customer not exist, and the total items price including promotions\nSkipped properties: id,href,id,href,validFor,cartTotalPrice", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "contactMedium": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/ContactMedium"
+                    }
+                }, 
+                "cartItem": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartItem"
+                    }
+                }, 
+                "relatedParty": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/RelatedPartyRef"
+                    }
+                }
+            }
+        }, 
+        "TimePeriod": {
+            "type": "object", 
+            "description": "A base / value business entity used to represent a period of time between two timepoints.", 
+            "properties": {
+                "endDateTime": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "An instant of time, ending at the TimePeriod."
+                }, 
+                "startDateTime": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "An instant of time, starting at the TimePeriod"
+                }
+            }
+        }, 
+        "ContactMedium": {
+            "type": "object", 
+            "description": "Indicates the contact medium that could be used to contact the party.", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "preferred": {
+                    "type": "boolean", 
+                    "description": "If true, indicates that is the preferred contact medium"
+                }, 
+                "type": {
+                    "type": "string", 
+                    "description": "Type of the contact medium, such as: email address, telephone number, postal address"
+                }, 
+                "validFor": {
+                    "$ref": "#/definitions/TimePeriod", 
+                    "description": "The time period that the contact medium is valid for"
+                }, 
+                "characteristic": {
+                    "$ref": "#/definitions/MediumCharacteristic"
+                }
+            }
+        }, 
+        "CartPrice": {
+            "type": "object", 
+            "description": "An amount, usually of money, that represents the actual price paid by the customer for this item. May represent the total price of the shopping cart or the total of the cart item depending on the relation", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "description": {
+                    "type": "string", 
+                    "description": "A narrative that explains in detail the semantics of this order item price."
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "A short descriptive name such as \"Subscription price\"."
+                }, 
+                "priceType": {
+                    "type": "string", 
+                    "description": "A category that describes the price, such as recurring, discount, allowance, penalty, and so forth"
+                }, 
+                "recurringChargePeriod": {
+                    "type": "string", 
+                    "description": "Could be month, week..."
+                }, 
+                "unitOfMeasure": {
+                    "type": "string", 
+                    "description": "Could be minutes, GB..."
+                }, 
+                "price": {
+                    "$ref": "#/definitions/Price"
+                }, 
+                "priceAlteration": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/PriceAlteration"
+                    }
+                }
+            }
+        }, 
+        "CartItem": {
+            "type": "object", 
+            "description": "An identified part of the shopping cart. A shopping cart  is decomposed into one or more shopping cart item. Cart item represents a product offering or bundled product offering that user wish to purchase, as well as the pricing of the product offering, reference to product in case of configured characteristic or installation address. Cart items can be related to other cart item to related bundled offerings or reference cart Items to a shipping options", 
+            "required": [
+              "action"
+            ],
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "action": {
+                    "type": "string", 
+                    "description": "Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\""
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Identifier of the cart item (generally it is a sequence number 01, 02, 03, ...) in the shopping cart"
+                }, 
+                "quantity": {
+                    "type": "integer", 
+                    "description": "Quantity of cart items"
+                }, 
+                "status": {
+                    "type": "string", 
+                    "description": "status of cart item. e.g \"Active\" , \"SavedForLater\"."
+                }, 
+                "itemTerm": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartTerm"
+                    }
+                }, 
+                "cartItem": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartItem"
+                    }
+                }, 
+                "note": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/Note"
+                    }
+                }, 
+                "itemTotalPrice": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartPrice"
+                    }
+                }, 
+                "product": {
+                    "$ref": "#/definitions/Product"
+                }, 
+                "itemPrice": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartPrice"
+                    }
+                }, 
+                "productOffering": {
+                    "$ref": "#/definitions/ProductOfferingRef"
+                }, 
+                "cartItemRelationship": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartItemRelationship"
+                    }
+                }
+            }
+        }, 
+        "RelatedPartyRef": {
+            "type": "object", 
+            "description": "RelatedParty reference. A related party defines party or party role linked to a specific entity.", 
+            "required": [
+                "id", "href", "name"
+            ], 
+            "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Reference of the related party, could be a party reference or a party role reference"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of a related party"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "Name of the related party"
+                }, 
+                "role": {
+                    "type": "string", 
+                    "description": "Role of the related party."
+                }
+            }
+        }, 
+        "MediumCharacteristic": {
+            "type": "object", 
+            "description": "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)", 
+            "properties": {
+                "city": {
+                    "type": "string", 
+                    "description": "The city"
+                }, 
+                "country": {
+                    "type": "string", 
+                    "description": "The country"
+                }, 
+                "emailAddress": {
+                    "type": "string", 
+                    "description": "Full email address in standard format"
+                }, 
+                "faxNumber": {
+                    "type": "string", 
+                    "description": "The fax number of the contact"
+                }, 
+                "phoneNumber": {
+                    "type": "string", 
+                    "description": "The primary phone number of the contact"
+                }, 
+                "postCode": {
+                    "type": "string", 
+                    "description": "Postcode"
+                }, 
+                "stateOrProvince": {
+                    "type": "string", 
+                    "description": "State or province"
+                }, 
+                "street1": {
+                    "type": "string", 
+                    "description": "Describes the street"
+                }, 
+                "street2": {
+                    "type": "string", 
+                    "description": "Complementary street description"
+                }, 
+                "type": {
+                    "type": "string", 
+                    "description": "Type of medium (fax, mobile phone...)"
+                }
+            }
+        }, 
+        "Price": {
+            "type": "object", 
+            "description": "Provides all amounts (tax included, duty free, tax rate), used currency and percentage to apply for Price Alteration.", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "dutyFreeAmount": {
+                    "$ref": "#/definitions/Money", 
+                    "description": "All taxes excluded amount (expressed in the given currency)"
+                }, 
+                "percentage": {
+                    "type": "number", 
+                    "format": "float", 
+                    "description": "Percentage to apply for ProdOfferPriceAlteration"
+                }, 
+                "taxIncludedAmount": {
+                    "$ref": "#/definitions/Money", 
+                    "description": "All taxes included amount (expressed in the given currency)"
+                }, 
+                "taxRate": {
+                    "type": "number", 
+                    "format": "float", 
+                    "description": "Tax rate"
+                }
+            }
+        }, 
+        "PriceAlteration": {
+            "type": "object", 
+            "description": "Is an amount, usually of money, that modifies the price charged for an order item.", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "applicationDuration": {
+                    "type": "integer", 
+                    "description": "Duration during which the alteration applies on the order item price (for instance 2 months free of charge for the recurring charge)"
+                }, 
+                "description": {
+                    "type": "string", 
+                    "description": "A narrative that explains in detail the semantics of this order item price alteration"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "A short descriptive name such as \"Monthly discount\""
+                }, 
+                "priceType": {
+                    "type": "string", 
+                    "description": "A category that describes the price such as recurring, one time and usage."
+                }, 
+                "priority": {
+                    "type": "integer", 
+                    "description": "Priority level for applying this alteration among all the defined alterations on the order item price"
+                }, 
+                "recurringChargePeriod": {
+                    "type": "string", 
+                    "description": "Could be month, week..."
+                }, 
+                "unitOfMeasure": {
+                    "type": "string", 
+                    "description": "Could be minutes, GB..."
+                }, 
+                "price": {
+                    "$ref": "#/definitions/Price"
+                }
+            }
+        }, 
+        "Money": {
+            "type": "object", 
+            "description": "A base / value business entity used to represent money", 
+            "properties": {
+                "unit": {
+                    "type": "string", 
+                    "description": "Currency (ISO4217 norm uses 3 letters to define the currency)"
+                }, 
+                "value": {
+                    "type": "number", 
+                    "format": "float", 
+                    "description": "A positive floating point number"
+                }
+            }
+        }, 
+        "CartTerm": {
+            "type": "object", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "description": {
+                    "type": "string"
+                }, 
+                "duration": {
+                    "$ref": "#/definitions/Quantity"
+                }, 
+                "name": {
+                    "type": "string"
+                }
+            }
+        }, 
+        "Note": {
+            "type": "object", 
+            "description": "Extra information about a given entity", 
+            "properties": {
+                "author": {
+                    "type": "string", 
+                    "description": "Author of the note"
+                }, 
+                "date": {
+                    "type": "string", 
+                    "format": "date-time", 
+                    "description": "Date of the note"
+                }, 
+                "text": {
+                    "type": "string", 
+                    "description": "Text of the note"
+                }
+            }
+        }, 
+        "Product": {
+            "type": "object", 
+            "description": "Product reference. Configure the product characteristics (only configurable characteristics and necessary only if a non default value is selected) and/or identify the product that needs to be modified/deleted.", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Indicates the type of the referred object. This attribute is to be used when the object is representing a reference to an existing object instead of the of the object itself."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Reference of the product"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the product"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "Name of the product"
+                }, 
+                "productRelationship": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/ProductRelationship"
+                    }
+                }, 
+                "place": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/Place"
+                    }
+                }, 
+                "characteristic": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/ProductCharacteristic"
+                    }
+                }, 
+                "relatedParty": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/RelatedPartyRef"
+                    }
+                }, 
+                "productSpecification": {
+                    "$ref": "#/definitions/ProductSpecificationRef"
+                }
+            }
+        }, 
+        "ProductOfferingRef": {
+            "type": "object", 
+            "description": "ProductOffering reference. A product offering represents entities that are orderable from the provider of the catalog, this resource includes pricing information.", 
+            "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Reference of the product offering"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the product offering"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "Name of the product offering"
+                }
+            }
+        }, 
+        "CartItemRelationship": {
+            "type": "object", 
+            "description": "Relationship among cart items mainly other than hierarchical relationships such as \"RelyOn\", \"DependentOn\", \"Shipping\" etc.", 
+            "properties": {
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the referred cart item"
+                }, 
+                "type": {
+                    "type": "string", 
+                    "description": "Type of the cart item relationship"
+                }, 
+                "cartItem": {
+                    "type": "array", 
+                    "items": {
+                        "$ref": "#/definitions/CartItemRef"
+                    }
+                }
+            }
+        }, 
+        "Quantity": {
+            "type": "object", 
+            "properties": {
+                "amount": {
+                    "type": "number", 
+                    "format": "float"
+                }, 
+                "units": {
+                    "type": "string"
+                }
+            }
+        }, 
+        "ProductRelationship": {
+            "type": "object", 
+            "description": "Linked products to the one instantiate, it can be :\n<ul>\n <li>\"bundled\" if the product is a bundle and you want to describe the \"bundled\" products inside this bundle</li>\n <li> \"reliesOn\" if the product needs another already owned product to rely on (e.g. an option on an already owned mobile access product)</li>\n</ul>\n\"targets\" or \"isTargeted\" (depending on the way of expressing the link) for any other kind of links that may be useful", 
+            "properties": {
+                "type": {
+                    "type": "string", 
+                    "description": "Type of the product relationship. It can be :\n<ul>\n <li>\"bundled\" if the product is a bundle and you want to describe the \"bundled\" products inside this bundle</li>\n <li> \"reliesOn\" if the product needs another already owned product to rely on (e.g. an option on an already owned mobile access product)</li>\n</ul>\n\"targets\" or \"isTargeted\" (depending on the way of expressing the link) for any other kind of links that may be useful"
+                }, 
+                "product": {
+                    "$ref": "#/definitions/Product"
+                }
+            }
+        }, 
+        "Place": {
+            "type": "object", 
+            "description": "Place defines a location generically. Could be a geographic address a geographic address, a geographic location.", 
+            "properties": {
+                "@baseType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the base class type of the extension class of the current object. Useful only when the class type of the current  object is unknown to the implementation."
+                }, 
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Indicates the type of the referred object. This attribute is to be used when the object is representing a reference to an existing object instead of the of the object itself."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the link to the schema that defines the structure of the class type of the current object."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "Generic attribute containing the name of the resource class type"
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Unique reference of the place"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the place"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "A user-friendly name for the place, such as \"Paris Store\", \"London Store\", \"Main Home\""
+                }, 
+                "role": {
+                    "type": "string", 
+                    "description": "Role of the place (for instance: 'home delivery', 'shop retrieval')"
+                }
+            }
+        }, 
+        "ProductCharacteristic": {
+            "type": "object", 
+            "description": "Characteristics of the product to instantiate or to modify", 
+            "properties": {
+                "name": {
+                    "type": "string", 
+                    "description": "Name of the characteristic"
+                }, 
+                "value": {
+                    "type": "string", 
+                    "description": "Value of the characteristic"
+                }
+            }
+        }, 
+        "ProductSpecificationRef": {
+            "type": "object", 
+            "description": "Product specification reference: A ProductSpecification is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to customers or other parties playing a party role.", 
+            "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
+                "href": {
+                    "type": "string", 
+                    "description": "Reference of the product specification"
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the product specification"
+                }, 
+                "name": {
+                    "type": "string", 
+                    "description": "Name of the product specification"
+                }, 
+                "version": {
+                    "type": "string", 
+                    "description": "Version of the product specification"
+                }            
+            }
+        }, 
+        "CartItemRef": {
+            "type": "object", 
+            "description": "CartIIem reference. A CartItem is an identified part of the shopping cart.", 
+            "properties": {
+                "@referredType": {
+                    "type": "string", 
+                    "description": "Generic attribute indicating the name of the class type of the referred resource entity."
+                }, 
+                "id": {
+                    "type": "string", 
+                    "description": "Unique identifier of the cart item"
+                }
+            }
+        }, 
+        "EventSubscription": {
+            "required": [
+                "id", 
+                "callback"
+            ], 
+            "properties": {
+                "id": {
+                    "type": "string", 
+                    "description": "Id of the listener"
+                }, 
+                "callback": {
+                    "type": "string", 
+                    "description": "The callback being registered."
+                }, 
+                "query": {
+                    "type": "string", 
+                    "description": "additional data to be passed"
+                }
+            }
+        }, 
+        "EventSubscriptionInput": {
+            "required": [
+                "callback"
+            ], 
+            "properties": {
+                "callback": {
+                    "type": "string", 
+                    "description": "The callback being registered."
+                }, 
+                "query": {
+                    "type": "string", 
+                    "description": "additional data to be passed"
+                }
+            }
+        }, 
+        "Error": {
+            "required": [
+                "code", 
+                "reason"
+            ], 
+            "properties": {
+                "code": {
+                    "type": "integer", 
+                    "description": "Application related code."
+                }, 
+                "reason": {
+                    "type": "integer", 
+                    "description": "Text that explains the reason for error."
+                }, 
+                "message": {
+                    "type": "string", 
+                    "description": "(optional) Text that provide more details and corrective actions related to the error."
+                }, 
+                "status": {
+                    "type": "integer", 
+                    "description": "(optional) http error code extension like 400-2"
+                }, 
+                "referenceError": {
+                    "type": "string", 
+                    "description": "(optional) A URL to online documentation that provides more information about the error."
+                }, 
+                "@type": {
+                    "type": "string", 
+                    "description": "(optional) The class type of a REST resource."
+                }, 
+                "@schemaLocation": {
+                    "type": "string", 
+                    "description": "(optional) A link to the schema describing a REST resource."
+                }
+            }
+        }
+    }
+}
